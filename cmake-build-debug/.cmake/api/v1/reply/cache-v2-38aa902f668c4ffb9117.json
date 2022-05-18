@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "e:/DTU/C++/All_File/File_student/cmake-build-debug"
+			"value" : "e:/DTU/C++/All_File/File_student/File_Student/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -623,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/DTU/C++/All_File/File_student"
+			"value" : "E:/DTU/C++/All_File/File_student/File_Student"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1239,7 +1239,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/DTU/C++/All_File/File_student/cmake-build-debug"
+			"value" : "E:/DTU/C++/All_File/File_student/File_Student/cmake-build-debug"
 		},
 		{
 			"name" : "File_student_IS_TOP_LEVEL",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/DTU/C++/All_File/File_student"
+			"value" : "E:/DTU/C++/All_File/File_student/File_Student"
 		}
 	],
 	"kind" : "cache",

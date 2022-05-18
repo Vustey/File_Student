@@ -8,8 +8,6 @@ private:
     string id;
     string name;
 public:
-    void change();
-    void display();
     void output();
     Student();
     Student(const string &id, const string &name) : id(id), name(name) {}
@@ -88,6 +86,8 @@ void ReadandwriteStudent::writeAll(string path, list<Student> s) {
 }
 class Studentservice{
 public:
+    void change();
+    void display();
     void addStudent();
 private:
     list<Student>list;
@@ -108,30 +108,63 @@ void Studentservice::addStudent() {
         Student s(id,name);
         list.push_back(s);
     }
-    ReadandwriteStudent().writeAll("E:\\DTU\\C++\\All_File\\File_student\\input",list);
+    ReadandwriteStudent().writeAll("E:\\DTU\\C++\\All_File\\File_student\\File_Student\\input",list);
 }
-void Student :: display()
+void Studentservice :: display()
 {
-    list = ReadandwriteStudent().readAll("E:\\DTU\\C++\\All_File\\File_student\\input");
+    list = ReadandwriteStudent().readAll("E:\\DTU\\C++\\All_File\\File_student\\File_Student\\input");
     for(Student e : list)
     {
         e.output();
     }
 }
-void Student::change() {
-    Student s;
-    s.display();
-    string id_fake;
-    string name_fake;
-    cout<<"Nhap id can doi :";
-    getline(cin,id_fake);
-    if(id_fake==id){
-        
-    }
 
+void Studentservice::change() {
+    Studentservice stu;
+    list = ReadandwriteStudent().readAll("E:\\DTU\\C++\\All_File\\File_student\\File_Student\\input");
+    stu.display();
+    int n;
+    string name_fake;
+    cout<<"Nhap id can thay doi:";
+    cin>>n;
+    string id_fake ="STD-000"+ to_string(n);
+    Student *tmp;
+    bool check = true;
+    for(Student &s:list){
+        if(id_fake==s.getId()){
+            check= false;
+            tmp = &s;
+        }
+    }
+    if(check){
+        cout<<"Khong co id trung"<<endl;
+    }else{
+        tmp->output();
+        cout<<"Nhap ten can thay doi:";
+        cin.ignore();
+        getline(cin,name_fake);
+        tmp->setName(name_fake);
+        cout<<id_fake<<","<<tmp->getName()<<endl;
+        ReadandwriteStudent().writeAll("E:\\DTU\\C++\\All_File\\File_student\\File_Student\\input",list);
+    }
 }
+
 int main(){
     Studentservice s;
-    s.addStudent();
+    cout<<"1.Them 1 student"<<endl;
+    cout<<"2.Thay doi name"<<endl;
+    int n;
+    cout<<"Chon :";
+    cin>>n;
+    switch (n) {
+        case 1:{
+            s.addStudent();
+            break;
+        }
+        case 2:{
+            s.change();
+            break;
+        }
+    }
     return 0;
 }

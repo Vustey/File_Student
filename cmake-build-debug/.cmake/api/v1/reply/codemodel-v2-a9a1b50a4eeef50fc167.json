@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/DTU/C++/All_File/File_student/cmake-build-debug",
-		"source" : "E:/DTU/C++/All_File/File_student"
+		"build" : "E:/DTU/C++/All_File/File_student/File_Student/cmake-build-debug",
+		"source" : "E:/DTU/C++/All_File/File_student/File_Student"
 	},
 	"version" : 
 	{
